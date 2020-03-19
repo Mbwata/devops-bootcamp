@@ -1,5 +1,5 @@
 {
-  "name": "devopsmw"
+  "name": "devopsmw"+
   "version": "0.1.0",
   "description": "Dice-Roller app for DevOps Bootcamp",
   "main": "app.js",
