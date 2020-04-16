@@ -1,7 +1,7 @@
 const defaultSides = 6;
 
 class Die {
-  constructor(numSides = 6) {
+  constructor(numSides = defaultSides) {
     if (Number(numSides) != numSides || numSides <= 0) {
       this.numSides = defaultSides;
     } else {
