@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
 
 let saveRoll = async function (sides, rollResult) {
   try {
-    await db.none(`INSERT INTO roll_history(die_sides, result) VALUES (${sides}, ${rollResult});`);
+    await db.none(`INSERT INTO dieroll.roll_history(die_sides, result) VALUES (${sides}, ${rollResult});`);
   } catch (e) {
     logger.error('Failed to log roll history.');
     logger.error(e);

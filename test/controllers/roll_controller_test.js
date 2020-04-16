@@ -38,7 +38,7 @@ describe('roll', async () => {
         });
 
     // query database for result & perform assertions
-    let rollHistories = await db.any('SELECT * FROM roll_history;');
+    let rollHistories = await db.any('SELECT * FROM dieroll.roll_history;');
     // console.log(rollHistories);
     rollHistories.length.should.equal(1);
 
