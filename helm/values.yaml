@@ -1,0 +1,31 @@
+# Default values for dieroll.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+metadata:
+  namespace: workshopuser#
+
+appVersion: "1.0"
+
+replicas:
+  replicaCount: 1
+
+image:
+  repository: 686567993080.dkr.ecr.us-east-1.amazonaws.com/devopsbootcampuser#
+  tag: latest
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 3000
+  internalport: 3000
+  externalport: 80
+
+ingress:
+  enabled: true
+  path: /*
+  hosts:
+    - k8s.sketchdev.io
+  tls: []
