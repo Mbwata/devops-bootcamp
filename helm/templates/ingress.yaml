@@ -12,10 +12,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - {{ .Values.metadata.namespace }}.k8s.sketchdev.io
+    - {{ .Values.metadata.namespace }}.localhost
     secretName: tls-secret
   rules:
-  - host: {{ .Values.metadata.namespace }}.k8s.sketchdev.io
+  - host: {{ .Values.metadata.namespace }}.localhost
     http:
       paths:
         - path: /{{ .Values.appVersion }}(/|$)(.*)

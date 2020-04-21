@@ -3,16 +3,16 @@
 # Declare variables to be passed into your templates.
 
 metadata:
-  namespace: workshopuser#
-
-appVersion: "1.0"
+  namespace: dieroll
+  appVersion: "1.0"
 
 replicas:
   replicaCount: 1
 
 image:
-  repository: 686567993080.dkr.ecr.us-east-1.amazonaws.com/devopsbootcampuser#
-  tag: latest
+  repository: nexus-repo.localhost/die-roll
+  tag: "latest"
+  pullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
@@ -27,5 +27,5 @@ ingress:
   enabled: true
   path: /*
   hosts:
-    - k8s.sketchdev.io
+    - localhost
   tls: []
