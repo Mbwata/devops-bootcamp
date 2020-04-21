@@ -10,7 +10,7 @@ replicas:
   replicaCount: 1
 
 image:
-  repository: nexus-repo.localhost/die-roll
+  repository: nexus-repo.localhost/dieroll
   tag: "latest"
   pullPolicy: Always
 
